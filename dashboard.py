@@ -71,6 +71,35 @@ apple_theme_css = """
     .stTabs [data-baseweb="tab-highlight"] {
         display: none !important;
     }
+    
+    /* ปรับแต่งสำหรับหน้าจอมือถือ (Mobile Responsiveness) */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 1.5rem !important;
+        }
+        h3 {
+            font-size: 1.1rem !important;
+        }
+        .stTabs [data-baseweb="tab-list"] {
+            flex-wrap: wrap; /* ให้แท็บปัดลงบรรทัดใหม่ถ้ายาวเกินจอ */
+            justify-content: center;
+        }
+        .stTabs [data-baseweb="tab"] {
+            flex: 1 1 auto; /* ขยายให้เต็มพื้นที่ */
+            text-align: center;
+            padding: 0px 10px;
+            font-size: 14px;
+            height: 36px;
+        }
+        /* ตกแต่งตัวเลขสถิติ (Metrics) ให้เป็นกล่องการ์ดสวยๆ บนมือถือ */
+        [data-testid="stMetric"] {
+            background-color: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 10px;
+        }
+    }
 </style>
 """
 st.markdown(apple_theme_css, unsafe_allow_html=True)
