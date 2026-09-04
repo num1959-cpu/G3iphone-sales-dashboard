@@ -78,7 +78,7 @@ st.markdown(apple_theme_css, unsafe_allow_html=True)
 
 @st.cache_data
 def load_data():
-    file_path = '/Users/somyotmekpha/Desktop/G3Sep/G3Sep.xlsx'
+    file_path = 'G3Sep.xlsx'
     
     sales = pd.read_excel(file_path, sheet_name='ยอดขาย')
     deposit = pd.read_excel(file_path, sheet_name='มัดจำ')
